@@ -1,8 +1,8 @@
 name = "remix-cloudflare-workers"
 type = "javascript"
-compatibility_date = "{{env.COMPATIBILITY_DATE}}"
-zone_id = "{{env.ZONE_ID}}"
-account_id = "{{env.ACCOUNT_ID}}"
+compatibility_date = "${{env.COMPATIBILITY_DATE}}"
+zone_id = "${{env.ZONE_ID}}"
+account_id = "${{env.ACCOUNT_ID}}"
 route = "zhe.work/*"
 workers_dev = true
 
