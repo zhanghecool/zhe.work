@@ -1,9 +1,9 @@
 name = "remix-cloudflare-workers"
 type = "javascript"
 
-zone_id = ""
-account_id = ""
-route = ""
+zone_id = "{{env.ZONE_ID}}"
+account_id = "{{env.ACCOUNT_ID}}"
+route = "zhe.work/*"
 workers_dev = true
 
 [site]
@@ -11,7 +11,7 @@ bucket = "./public"
 entry-point = "."
 
 [build]
-command = "npm run build:worker"
+command = "pnpm build:worker"
 watch_dir = "build/index.js"
 
 [build.upload]
