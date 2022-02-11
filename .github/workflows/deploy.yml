@@ -46,5 +46,8 @@ jobs:
         
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
+        env:
+          ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+          ZONE_ID: ${{ secrets.ZONE_ID }}
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
