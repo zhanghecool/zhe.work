@@ -2,12 +2,12 @@
  * @type {import('@remix-run/dev/config').AppConfig}
  */
 module.exports = {
-  appDirectory: "app",
-  assetsBuildDirectory: "public/build",
-  publicPath: "/build/",
-  serverModuleFormat: "esm",
-  serverPlatform: "neutral",
-  serverBuildDirectory: "build",
+  appDirectory: 'app',
+  assetsBuildDirectory: 'public/build',
+  publicPath: '/build/',
+  serverModuleFormat: process.env.NODE_ENV === 'development' ? 'cjs' : 'esm',
+  serverPlatform: ' ',
+  serverBuildDirectory: 'build',
   devServerBroadcastDelay: 1000,
-  ignoredRouteFiles: [".*"]
+  ignoredRouteFiles: ['.*'],
 };
